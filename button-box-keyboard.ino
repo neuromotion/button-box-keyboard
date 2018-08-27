@@ -12,11 +12,11 @@
 // full list, see https://www.pjrc.com/teensy/td_keyboard.html. For some reason
 // they are longer than a byte, even though we only care about the least
 // significant byte, so we have to mask them with 0xFF before storing them as
-// uint8_t.
+// a uint8_t.
 uint8_t keys[NUM_BUTTONS] = {KEY_1&0xFF, KEY_2&0xFF, KEY_3&0xFF};
 
 // Pin numbers the buttons are attached to.
-uint8_t pins[NUM_BUTTONS] = {11, 14, 12};
+uint8_t pins[NUM_BUTTONS] = {14, 12, 11};
 
 // The previous state of each button.
 bool was_down[NUM_BUTTONS] = {0};
