@@ -1,9 +1,5 @@
 #include "Report.h"
 
-#define NUM_KEYS_IN_REPORT 6 // This is defined by the USB spec and can't be changed.
-
-Report::Report(){}
-
 /// Add this key to the report.
 /// The scancode is the value of the teensy keyboard library's KEY_A etc constants.
 void Report::addKey(uint8_t scancode){

@@ -7,7 +7,7 @@ Arduino code for a simple keyboard with 3 buttons.
 
 WARNING: This code assumes the buttons are already perfectly debounced in hardware (with an RC filter and schmitt trigger), so it does not debounce in software. Don't try to use it with un-debounced buttons, or you'll see lots of short unintended presses!
 
-* Teensy 3.2  (Teensy LC should work as well)
+* Teensy 3.2  (Teensy LC should work also)
 
 * micro USB cable
 
