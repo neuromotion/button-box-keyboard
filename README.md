@@ -1,11 +1,13 @@
+# button-box-keyboard
+
 Arduino code for a simple keyboard with 3 buttons. 
 
 
-# Required Hardware
+## Required Hardware
 
 WARNING: This code assumes the buttons are already perfectly debounced in hardware (with an RC filter and schmitt trigger), so it does not debounce in software. Don't try to use it with un-debounced buttons, or you'll see lots of short unintended presses!
 
-* Teensy 3.2 
+* Teensy 3.2  (Teensy LC should work as well)
 
 * micro USB cable
 
@@ -16,7 +18,7 @@ WARNING: This code assumes the buttons are already perfectly debounced in hardwa
 * schmitt trigger inverter (one channel for each pushbutton)
 
 
-# Installing
+## Installing
 
 You don't need to install anything to use the button-box as a keyboard. To upload new firmware, however, you will need to:
 
@@ -25,7 +27,7 @@ You don't need to install anything to use the button-box as a keyboard. To uploa
 2. Install the [Teensyduino](https://www.pjrc.com/teensy/teensyduino.html) add-on to the Arduino IDE, to support the `Teensy3.2` board used in the button-box.
 
 
-# Running
+## Running
 
 1. Connect the button-box to the computer with a USB cable, if it wasn't already plugged in.
 

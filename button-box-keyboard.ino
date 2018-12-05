@@ -13,9 +13,9 @@
 // they are longer than a byte, even though we only care about the least
 // significant byte, so we have to mask them with 0xFF before storing them as
 // a uint8_t.
-uint8_t keys[NUM_BUTTONS] = {KEY_1&0xFF, KEY_2&0xFF, KEY_3&0xFF};
+uint8_t keys[NUM_BUTTONS] = {KEY_1 &0xFF, KEY_2 &0xFF, KEY_3 &0xFF};
 
-// Pin numbers the buttons are attached to.
+// Pin numbers the buttons are connected to.
 uint8_t pins[NUM_BUTTONS] = {14, 12, 11};
 
 // The previous state of each button.
@@ -53,7 +53,9 @@ void loop() {
   delay(1);
 }
 
-
+/// Fill the report with all the keys that are currently pressed. Return true if
+/// anything has changed since last time, meaning that we need to send this
+/// report.
 bool readyToSend(Report* report) {
   bool something_changed = 0;
   for(uint8_t i = 0; i < NUM_BUTTONS; i++) {
@@ -72,7 +74,7 @@ bool readyToSend(Report* report) {
   return something_changed;
 }
 
-
+/// Return true if the given button is currently pressed down.
 bool isDown(uint8_t button_index) {
   return digitalRead(pins[button_index]) == HIGH;
 }

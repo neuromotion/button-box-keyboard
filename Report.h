@@ -3,8 +3,8 @@
 
 #include "Arduino.h"
 
-// This stores the modifiers and up to 6 keys included in one USB HID report. It
-// can send itself to the host computer.
+/// This stores the modifiers and up to 6 keys included in one USB HID report. It
+/// can send itself to the host computer.
 
 class Report {
  public:
